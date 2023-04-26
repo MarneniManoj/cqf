@@ -1768,6 +1768,7 @@ bool qf_malloc(QF *qf, uint64_t nslots, uint64_t key_bits, uint64_t
 
 	uint64_t init_size = qf_init(qf, nslots, key_bits, value_bits, hash, seed,
 															 buffer, total_num_bytes);
+    printf("size of CQF in byte %ld in filter %ld \n", total_num_bytes, qf->metadata->total_size_in_bytes);
 
 	if (init_size == total_num_bytes)
 		return true;
